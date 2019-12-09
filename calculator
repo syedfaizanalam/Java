@@ -1,0 +1,44 @@
+/*Create a calculator that can add, 
+subtract, multiply, divide and find 
+the remainder of two integers. 
+
+Brought to you by Faizan Alam, 2019*/
+
+public class Calculator{ 
+
+
+//constructor method
+public Calculator(){
+  
+}
+/* create methods to add, subtract, 
+multiply, divide, and to find the 
+remainder */
+  public int add(int a, int b){
+    return a+b;
+  }
+
+  public int subtract(int a, int b){
+    return a-b;
+  }
+  
+  public int multiply(int a, int b){
+    return a*b;
+  }
+  
+  public int divide(int a, int b){
+    return a/b;
+  }
+  
+  public int modulo(int a, int b){
+    return a % b;
+  }
+  
+  //call add and subtract
+  public static void main(String[] args){
+    Calculator myCalculator = new Calculator();
+    System.out.println(myCalculator.add(5, 7));
+    System.out.println(myCalculator.subtract(45, 11));
+  }
+  
+}
