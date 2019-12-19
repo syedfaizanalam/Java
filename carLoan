@@ -1,0 +1,36 @@
+//testing conditions on a purchasing a car
+//purchasing car includes considering interest rate, 
+//downpayment, monthly charges, and the total 
+//time needed to pay the loan
+
+public class CarLoan {
+  
+  public static void main(String[] args) {
+
+
+//declare variables 
+int carLoan = 10000;
+int loanLength = 3;
+int interestRate = 5;
+int downPayment = 2000; 
+    
+    
+    //create conditionals for purchasing car
+    //car will either be bought, not bought, or bought
+    //with some sort of installment plan depending on
+    //the downpayment and the remaining balance 
+	if(loanLength <= 0 || interestRate <= 0) {
+  System.out.println("Error! You must take out a valid car loan.");
+} else if(downPayment >= carLoan) {
+  System.out.println("The car can be paid in full");
+} else{
+  int remainingBalance = carLoan - downPayment;
+  int months = loanLength * 12;
+  int monthlyBalance = remainingBalance / months;
+  int interest = monthlyBalance * interestRate / 100;
+  int monthlyPayment = monthlyBalance + interest;
+  System.out.println(monthlyPayment);
+}
+
+	}
+}
